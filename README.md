@@ -1,1 +1,1 @@
-# exp3
+# bandit-algorithms
