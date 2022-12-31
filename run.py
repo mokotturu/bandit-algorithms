@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 from bandit import StochasticBandit
-from exp3 import Exp3
+from exp3 import Exp3TB, Exp3OG
 from time import ctime, time
 
 def main():
@@ -20,7 +20,7 @@ def main():
 	# Run Exp3
 	# eta = np.sqrt(2 * np.log(k) / (T * k))
 	# print(f'eta = {eta}')
-	exp3 = Exp3(k, eta=0.01)
+	exp3 = Exp3OG(k, gamma=0.01)
 
 	# Store the rewards
 	rewards = np.zeros((runs, T))
