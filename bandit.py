@@ -1,14 +1,14 @@
 import numpy as np
 
 class StochasticBandit:
-	"""A stochastic Bandit with k arms.
-
-	## Parameters
-	means: np.ndarray
-		The means of the arms.
-	sds: np.ndarray
-		The standard deviations of the arms."""
 	def __init__(self, means: np.ndarray, sds: np.ndarray):
+		"""A stochastic bandit with k arms.
+
+		## Parameters
+		means: np.ndarray
+			The means of the arms.
+		sds: np.ndarray
+			The standard deviations of the arms."""
 		if means.size != sds.size:
 			raise ValueError('Means and standard deviations must have the same size')
 		self.k = means.size
